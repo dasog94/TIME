@@ -1,13 +1,15 @@
 @charset "UTF-8";
-    
 
 /* 기본 설정 : 페이지 전체 */
+
 body {
-    margin:0;
+    margin: 0;
     font-family: '맑은 고딕' 'Apple SD Gothic Neo', sans-serif;
 }
- 
+
+
 /* 기본 설정 : 도트 배경 */
+
 body ::after {
     content: "";
     width: 100%;
@@ -18,13 +20,15 @@ body ::after {
     z-index: -10;
     background-image: radial-gradient(#444 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
     opacity: 0.1;
-    background-position : 0 0, 10px 10px;
+    background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
 }
 
+
 /* 네비게이션 바 */
+
 header {
-    background-color : rgba(204, 204, 204, 0.8);
+    background-color: rgba(204, 204, 204, 0.8);
 }
 
 header .container {
@@ -34,12 +38,14 @@ header .container {
     margin: 0;
     padding: 0;
 }
+
 header .nav_btn {
     padding: 0;
     border: none;
     outline: none;
     background: none;
     cursor: pointer;
+    height: 1.5em;
 }
 
 .btn_img {
@@ -49,30 +55,37 @@ header .nav_btn {
     width: 7vw;
 }
 
+
 /* 네비게이션 바 : 드롭다운 */
+
 .dropdown-content {
     margin-top: 10px;
     display: none;
-/*    background-color: gainsboro;*/
+    /*    background-color: gainsboro;*/
 }
+
 .dropdown-content a {
-    background-color : rgba(204, 204, 204, 0);
+    background-color: rgba(204, 204, 204, 0);
     display: block;
     padding: 12px 50px 12px 8px;
     color: black;
     font-size: 12px;
     font-weight: 800;
     text-decoration: none;
-/*    border-bottom: 1px solid white;*/
-}
-.dropdown-content a:hover{
-    background-color : rgba(0, 0, 0, 0.3);
+    /*    border-bottom: 1px solid white;*/
 }
 
-.btn_img:hover .dropdown-content { 
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn_img:hover .dropdown-content {
     display: block;
 }
+
+
 /* 네비게이션 바 : 타이틀*/
+
 nav .title {
     margin: 0 2vw 0 0;
     font-size: 20px;
@@ -84,8 +97,10 @@ nav .title {
 
 
 /* 메인 화면 */
+
 .main {
     margin: 20vh auto;
+    margin-bottom: 0;
 }
 
 .main .container {
@@ -93,25 +108,79 @@ nav .title {
     align-items: center;
     justify-content: center;
 }
+
 .logo_img {
     border: 15px solid black;
-    margin : 0 auto;
-    width: 50vw;    
+    margin: 0 auto;
+    width: 50vw;
 }
 
-@media (max-width: 767px) {
 
+/* main 페이지 이외의 창의 body */
+
+.body {
+    border-radius: 1em;
+    background-color: #f7fafc;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 70vh;
+    display: flex;
+    box-shadow: #818080 0px 3px 4px;
+    flex-direction: column;
 }
+
+.body-head {
+    font-size: 1.3em;
+    height: 3em;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+    display: flex;
+}
+
+
+/* archieving 창 grid */
+
+.archieve-list {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    width: 90%;
+    margin-left: 2rem;
+    border-top: 1px solid #444;
+    border-left: 1px solid #444;
+    background-color: #f9fcff;
+}
+
+.archieve-list>span {
+    height: 1.5em;
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+}
+
+#archieve-upload {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+#archieve-upload:active {
+    color: rgb(80, 100, 155);
+}
+
+@media (max-width: 767px) {}
+
 
 /* 큰 테플릿과 컴퓨터 */
+
 @media (min-width: 768px) {
     header {
-        background-color : rgba(204, 204, 204, 0);
+        background-color: rgba(204, 204, 204, 0);
     }
     .logo_img {
         border: 15px solid black;
-        margin : 0 auto;
-        width: 30vw;    
+        margin: 0 auto;
+        width: 30vw;
     }
     /* 네비게이션 바 */
     .btn_img {
@@ -120,10 +189,9 @@ nav .title {
         padding: 10px;
         width: 4vw;
     }
-
     /* 네비게이션 바 : 드롭다운 */
     .dropdown-content {
-    /*    display: none;*/
+        /*    display: none;*/
         position: absolute;
         top: 77px;
         background-color: gainsboro;
@@ -136,14 +204,25 @@ nav .title {
         font-weight: 800;
         text-decoration: none;
     }
-    
     /* 네비게이션 바 : 타이틀*/
     nav .title {
         font-size: 32px;
     }
-    
     /* 메인 화면 */
     .main {
         margin: 15vh auto;
+        margin-bottom: 0;
+    }
+    /* main 페이지 이외의 창의 body */
+    .body {
+        flex-direction: row;
+    }
+    /* archieving 창 grid */
+    .archieve-list {
+        grid-template-columns: 18em 1fr 1fr;
+        margin-top: 1em;
+        text-align: center;
+        width: 70%;
+        height: min-content;
     }
 }

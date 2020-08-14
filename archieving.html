@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TIME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $(".nav_btn").click(function(){
+                $(".dropdown-content").slideToggle();
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+   <header>
+        <nav class="container">
+            <button type="button" class="nav_btn"><img class="btn_img" src="img/btn_m_menu.gif" alt=""></button>
+            <div class="title"><h3>TIME</h3></div>
+        </nav>
+        <div class = "dropdown-content">
+                <a href="">메인</a>
+                <a href="">소개</a>
+                <a href="">활동사진</a>
+                <a href="">아카이빙</a>
+        </div>
+            
+   </header>
+    
+   
+    <section class="main" style="margin-top:10vh;">
+        <section class="body">
+            <div class="body-head">아카이빙</div>
+            <div class="archieve-list">
+                <span>발표 주제</span><span>게시 일자</span><span>파일 다운</span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+                <span>코딩 잘하는 방법</span><span>20/08/15</span><span><i class="fas fa-file-archive"></i></span>
+            </div>
+            <a href="" id="archieve-upload"><i class="fas fa-plus"></i> 업로드</a>
+        </section>
+    </section>
+</body>
+</html>
