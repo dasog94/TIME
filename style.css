@@ -5,10 +5,14 @@
 body {
     margin: 0;
     font-family: '맑은 고딕' 'Apple SD Gothic Neo', sans-serif;
+    background-image: radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0), radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
 }
 
 
 /* 기본 설정 : 도트 배경 */
+/*
 
 body ::after {
     content: "";
@@ -17,12 +21,13 @@ body ::after {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -10;
-    background-image: radial-gradient(#444 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
-    opacity: 0.01;
-    background-position: 0 0, 10px 10px;
+    z-index: -1;
+    background-image: radial-gradient(#444 2px, transparent 0), radial-gradient(#444 2px, transparent 0);
+    background-position: 0 0, 10px 3px;
     background-size: 20px 20px;
+    opacity: 0.01;
 }
+*/
 
 /* 네비게이션 바 */
 
@@ -85,7 +90,7 @@ header .nav_btn {
 /* 네비게이션 바 : 타이틀*/
 
 nav .title {
-    margin: 0 2vw 0 0;
+    margin: 1vh 2vw 1vh 0;
     font-size: 20px;
     padding: 0 0;
     color: red;
@@ -116,7 +121,7 @@ nav .title {
 /* 소개 */
 
 .introduction {
-    margin: 15vh 20% 0 20%;
+    margin: 15vh 5% 0 5%;
 }
 .introduction .container {
     background-color: white;
