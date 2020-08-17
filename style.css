@@ -5,13 +5,15 @@
 body {
     margin: 0;
     font-family: '맑은 고딕' 'Apple SD Gothic Neo', sans-serif;
-    background-image: radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0), radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
 }
 
 
 /* 기본 설정 : 도트 배경 */
+
+
 /*
 
 body ::after {
@@ -28,6 +30,7 @@ body ::after {
     opacity: 0.01;
 }
 */
+
 
 /* 네비게이션 바 */
 
@@ -109,7 +112,6 @@ nav .title {
 .main .container {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .logo_img {
@@ -118,19 +120,26 @@ nav .title {
     width: 50vw;
 }
 
+
 /* 소개 */
 
 .introduction {
     margin: 15vh 5% 0 5%;
 }
+
 .introduction .container {
     background-color: white;
+    padding: 1em;
+    padding-top: 0.5em;
+    border-radius: 1em;
+    background-color: #f7fafc;
+    box-shadow: #818080 0px 3px 4px;
 }
+
 
 /* 소개 : contact */
 
-.introduction .container .contact {
-}
+.introduction .container .contact {}
 
 .introduction .container .contact a {
     color: black;
@@ -206,10 +215,10 @@ nav .title {
         justify-content: flex-end;
         margin: 0;
         padding: 0;
-    }    
+    }
     header .nav_btn {
         position: absolute;
-        top : 30vh;
+        top: 30vh;
         left: 5vw;
         padding: 0;
         border: none;
@@ -269,10 +278,9 @@ nav .title {
         display: flex;
     }
     /* 소개 : Contact */
-    .introduction .container .contact{
+    .introduction .container .contact {
         margin-right: 10%;
     }
-
     /* main 페이지 이외의 창의 body */
     .body {
         flex-direction: row;
