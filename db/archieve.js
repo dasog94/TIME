@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("mongoose-type-url");
 
 const ArchieveSchema = new mongoose.Schema({
-    updatedDate: { type: Date },
+    updatedDate: String,
     fileURL: {
         type: mongoose.SchemaTypes.Url,
         required: "URL cannot be empty",
@@ -12,6 +12,11 @@ const ArchieveSchema = new mongoose.Schema({
 
 ArchieveSchema.pre("save", function(next) {
     this.updated_at = Date.now();
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const dt = date.getDate();
+    this.updatedDate = year + "/" + month + "/" + dt;
     next();
 });
 

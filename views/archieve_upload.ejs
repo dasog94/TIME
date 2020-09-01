@@ -37,13 +37,15 @@
     <section class="main" style="margin-top: 10vh">
         <section class="body archieve">
             <div class="body-head">
-                <h2>아카이빙</h2>
+                <h2>아카이빙 - 업로드</h2>
             </div>
-            <form>
-                <input type="text" name="title" />
-                <input type="url" name="fileURL" />
-                <input type="submit" value="Upload" />
-            </form>
+            <div class="arch__form">
+                <form action="/archieving/upload" method="POST">
+                    <input type="text" name="title" placeholder="Title" />
+                    <input type="url" name="fileURL" placeholder="URL" />
+                    <input type="submit" value="Upload" />
+                </form>
+            </div>
         </section>
     </section>
 </body>

@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: '맑은 고딕' 'Apple SD Gothic Neo', sans-serif;
+    font-family: "맑은 고딕" "Apple SD Gothic Neo", sans-serif;
     background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
@@ -105,7 +105,7 @@ nav .title {
     font-size: 20px;
     padding: 0 0;
     color: red;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     line-height: 0;
 }
 
@@ -149,7 +149,7 @@ nav .title {
 .introduction .container .contact a {
     color: black;
     font-weight: 700;
-    text-decoration: none
+    text-decoration: none;
 }
 
 
@@ -170,7 +170,7 @@ nav .title {
 .body-head {
     height: 3em;
     padding-left: 1rem;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     align-items: center;
     display: flex;
 }
@@ -203,6 +203,27 @@ nav .title {
 
 #archieve-upload:active {
     color: rgb(80, 100, 155);
+}
+
+.arch__form {
+    margin-top: 4rem;
+}
+
+.arch__form input {
+    font-size: 1.3rem;
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4rem;
+    height: 2rem;
+    border: none;
+    border-bottom: #444 solid 0.3rem;
+}
+
+.arch__form input[type="submit"] {
+    background-color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {}
@@ -304,5 +325,8 @@ nav .title {
     }
     .introduction .container {
         flex-direction: column;
+    }
+    .arch__form {
+        width: 100%;
     }
 }
