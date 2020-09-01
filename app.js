@@ -19,7 +19,7 @@ app.set("views", __dirname + "/views");
 
 // 화면 engine을 ejs로 설정
 app.set("view engine", "ejs");
-app.engine("html", require("ejs").renderFile);
+//app.engine("html", require("ejs").renderFile);
 
 // 기본 path를 /public으로 설정(css, javascript 등의 파일 사용을 위해)
 app.use(express.static(__dirname + "/public"));
@@ -27,8 +27,8 @@ app.use(express.static(__dirname + "/public"));
 db();
 // Url
 app.use("/", indexRouter);
-app.use("/", introductionRouter);
-app.use("/", archievingRouter);
+app.use("/introduction", introductionRouter);
+app.use("/archieving", archievingRouter);
 
 module.exports = app;
 

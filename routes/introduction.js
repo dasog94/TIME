@@ -1,9 +1,9 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET introduction page. */
-router.get('/introduction', function (req, res, next) {
-    res.render('introduction.html');
+router.get("/", function(req, res, next) {
+    res.render("introduction.ejs");
 });
 
 module.exports = router;
