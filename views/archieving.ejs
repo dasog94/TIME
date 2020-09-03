@@ -53,8 +53,17 @@
           ></span>
                     <% } %>
             </div>
-            <a href="/archieving/upload" id="archieve-upload"><i class="fas fa-plus"></i
-        ></a>
+                <a href="/archieving/upload" id="archieve-upload"><i class="fas fa-plus"></i
+                ></a>
+            <div class="archieve-paginator">
+                <% if (hasPrev) {%> 
+                    <a href="/archieving/?page=<%=Number(page)-1 %>"> < </a>
+                <% } %>
+                    <span> <%= page %> </span>
+                <% if (hasNext) {%> 
+                    <a href="/archieving/?page=<%=Number(page)+1 %>"> > </a>
+                <% } %>
+            </div>
         </section>
     </section>
 </body>
