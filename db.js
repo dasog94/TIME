@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import ArchieveModel from "./db/archieve.js";
 
-module.exports = () => {
+const db = () => {
     function connect() {
         mongoose.connect(
             "mongodb://127.0.0.1:27017/", { useUnifiedTopology: true, useNewUrlParser: true },
@@ -16,3 +16,5 @@ module.exports = () => {
     connect();
     mongoose.connection.on("disconnected", connect);
 };
+
+export default db;

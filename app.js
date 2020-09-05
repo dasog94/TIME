@@ -31,7 +31,7 @@ app.use("/introduction", introductionRouter);
 app.use("/archieving", archievingRouter);
 app.use("/picture", pictureRouter);
 
-module.exports = app;
+export default app;
 
 //작동 확인용
 const PORT = process.env.PORT || 3000;
