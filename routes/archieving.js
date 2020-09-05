@@ -1,6 +1,6 @@
 import express from "express";
 var router = express.Router();
-import ArchieveModel from "../db/archieve";
+import ArchieveModel from "../db/archieve.js";
 
 /* GET archieving page. */
 router.get("/", function(req, res, next) {

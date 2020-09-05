@@ -3,10 +3,10 @@ import morgan from "morgan";
 const app = express();
 
 // router 설정
-import indexRouter from "./routes/index";
-import introductionRouter from "./routes/introduction";
-import archievingRouter from "./routes/archieving";
-import pictureRouter from "./routes/picture";
+import indexRouter from "./routes/index.js";
+import introductionRouter from "./routes/introduction.js";
+import archievingRouter from "./routes/archieving.js";
+import pictureRouter from "./routes/picture.js";
 
 // db 받아오기
 import db from "./db.js";

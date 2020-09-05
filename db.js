@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import ArchieveModel from "./db/archieve";
+import ArchieveModel from "./db/archieve.js";
 
 module.exports = () => {
     function connect() {
