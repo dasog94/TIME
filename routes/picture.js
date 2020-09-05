@@ -40,4 +40,4 @@ router.get("/:pic_no", function(req, res) {
     }
 });
 
-module.exports = router;
+export const pictureRouter = router;

@@ -40,4 +40,4 @@ router.post("/upload", function(req, res) {
     });
 });
 
-module.exports = router;
+export const archievingRouter = router;

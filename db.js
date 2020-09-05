@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import ArchieveModel from "../db/archieve";
+
 module.exports = () => {
     function connect() {
         mongoose.connect(
@@ -13,5 +15,4 @@ module.exports = () => {
     }
     connect();
     mongoose.connection.on("disconnected", connect);
-    require("./db/archieve.js");
 };

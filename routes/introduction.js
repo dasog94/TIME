@@ -6,4 +6,4 @@ router.get("/", function(req, res, next) {
     res.render("introduction.ejs");
 });
 
-module.exports = router;
+export const introductionRouter = router;

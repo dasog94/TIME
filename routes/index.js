@@ -6,4 +6,4 @@ router.get("/", function(req, res, next) {
     res.render("index.ejs");
 });
 
-module.exports = router;
+export const indexRouter = router;

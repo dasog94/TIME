@@ -1,17 +1,17 @@
-const express = require("express");
+import express from "express";
+import morgan from "morgan";
 const app = express();
-const logger = require("morgan");
 
 // router 설정
-const indexRouter = require("./routes/index");
-const introductionRouter = require("./routes/introduction");
-const archievingRouter = require("./routes/archieving");
-const pictureRouter = require("./routes/picture");
+import indexRouter from "./routes/index";
+import introductionRouter from "./routes/introduction";
+import archievingRouter from "./routes/archieving";
+import pictureRouter from "./routes/picture";
 
 // db 받아오기
-const db = require("./db.js");
+import db from "./db.js";
 
-app.use(logger("dev"));
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -20,7 +20,6 @@ app.set("views", __dirname + "/views");
 
 // 화면 engine을 ejs로 설정
 app.set("view engine", "ejs");
-//app.engine("html", require("ejs").renderFile);
 
 // 기본 path를 /public으로 설정(css, javascript 등의 파일 사용을 위해)
 app.use(express.static(__dirname + "/public"));
