@@ -1,4 +1,4 @@
-var express = require("express");
+import express from "express";
 var router = express.Router();
 import ArchieveModel from "../db/archieve";
 
@@ -40,4 +40,5 @@ router.post("/upload", function(req, res) {
     });
 });
 
-export const archievingRouter = router;
+const archievingRouter = router;
+export default archievingRouter;

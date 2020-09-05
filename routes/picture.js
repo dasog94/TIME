@@ -1,4 +1,4 @@
-var express = require("express");
+import express from "express";
 var router = express.Router();
 
 const image_list = [
@@ -40,4 +40,5 @@ router.get("/:pic_no", function(req, res) {
     }
 });
 
-export const pictureRouter = router;
+const pictureRouter = router;
+export default pictureRouter;

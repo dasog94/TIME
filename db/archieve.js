@@ -1,11 +1,10 @@
-const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate-v2");
-require("mongoose-type-url");
+import mongoose from "mongoose";
+import paginate from "mongoose-paginate-v2";
 
 const ArchieveSchema = new mongoose.Schema({
     updatedDate: String,
     fileURL: {
-        type: mongoose.SchemaTypes.Url,
+        type: String,
         required: "URL cannot be empty",
     },
     title: { type: String, required: "title cannot be empty" },
@@ -21,7 +20,7 @@ ArchieveSchema.pre("save", function(next) {
     next();
 });
 
-ArchieveSchema.plugin(mongoosePaginate);
+ArchieveSchema.plugin(paginate);
 
 // 현재 db의 archieve collection을 찾아 ArchieveModel 속에 넣는다.
 const ArchieveModel = mongoose.model("Archieve", ArchieveSchema);
