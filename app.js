@@ -15,6 +15,12 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(
+    import.meta.url);
+const __dirname = dirname(__filename);
 // view 경로 설정
 app.set("views", __dirname + "/views");
 
