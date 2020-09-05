@@ -35,7 +35,9 @@ app.use("/picture", pictureRouter);
 module.exports = app;
 
 //작동 확인용
-app.listen(3000, function() {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function() {
     console.log("connected");
-    console.log("http://localhost:3000/");
+    console.log(`http://localhost:${PORT}/`);
 });
