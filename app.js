@@ -6,6 +6,7 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const introductionRouter = require("./routes/introduction");
 const archievingRouter = require("./routes/archieving");
+const pictureRouter = require("./routes/picture");
 
 // db 받아오기
 const db = require("./db.js");
@@ -29,6 +30,7 @@ db();
 app.use("/", indexRouter);
 app.use("/introduction", introductionRouter);
 app.use("/archieving", archievingRouter);
+app.use("/picture", pictureRouter);
 
 module.exports = app;
 

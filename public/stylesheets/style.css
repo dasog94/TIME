@@ -1,10 +1,17 @@
 @charset "UTF-8";
+@font-face {
+    font-family: "paybooc-Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* 기본 설정 : 페이지 전체 */
 
 body {
     margin: 0;
-    font-family: "맑은 고딕" "Apple SD Gothic Neo", sans-serif;
+    font-family: "paybooc-Bold" "맑은 고딕" "Apple SD Gothic Neo", sans-serif;
     background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 0);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
@@ -160,7 +167,7 @@ nav .title {
     background-color: rgba(255, 255, 255);
     margin-left: 10%;
     margin-right: 10%;
-    min-height: 70vh;
+    min-height: 60vh;
     display: flex;
     border: 7px solid black;
     box-shadow: #444 5px 5px 0px;
@@ -294,12 +301,53 @@ nav .title {
     cursor: pointer;
 }
 
+#picture {
+    padding-top: 2rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255);
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 60vh;
+    display: flex;
+    width: 80%;
+    border: 7px solid black;
+    box-shadow: #444 5px 5px 0px;
+    flex-direction: column;
+}
+
+#pic_container {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#img__container {
+    width: 40vh;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#pic_container a {
+    text-decoration: none;
+    outline: none;
+    font-size: 2rem;
+}
+
 @media (max-width: 767px) {}
 
 
 /* 큰 테플릿과 컴퓨터 */
 
-@media (min-width: 768px) {
+@media (min-width: 800px) and (max-width: 1300px) {
     header {
         background-color: rgba(204, 204, 204, 0);
     }

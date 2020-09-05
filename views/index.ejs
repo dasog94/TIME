@@ -1,38 +1,29 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIME</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $(function(){
-            $(".nav_btn").click(function(){
+        $(function() {
+            $(".nav_btn").click(function() {
                 $(".dropdown-content").slideToggle();
             });
         });
     </script>
 </head>
+
 <body>
-   <header>
-        <nav class="container">
-            <button type="button" class="nav_btn"><img class="btn_img" src="img/btn_m_menu.gif" alt=""></button>
-            <div class="title"><h3>TIME</h3></div>
-        </nav>
-        <div class = "dropdown-content">
-            <a href="/">메인</a>
-            <a href="/introduction">소개</a>
-            <a href="">활동사진</a>
-            <a href="/archieving">아카이빙</a>
-        </div>
-            
-   </header>
-    
-   
-    <section class="main">
-        <section class="container">
-            <img class="logo_img" src="img/Time_logo.jpg" alt="">
+    <%- include ("./partials/header") %>
+
+        <section class="main">
+            <section class="container">
+                <img class="logo_img" src="img/Time_logo.jpg" alt="" />
+            </section>
         </section>
-    </section>
 </body>
+
 </html>
