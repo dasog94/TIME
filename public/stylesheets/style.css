@@ -342,6 +342,23 @@ nav .title {
     font-size: 2rem;
 }
 
+footer {
+    right: 1.6rem;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    padding: 0.5rem;
+    word-break: keep-all;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+footer p:nth-child(1) {
+    font-size: 1.1rem;
+}
+
 @media (max-width: 767px) {}
 
 
